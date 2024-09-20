@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BajajFinserv Button UI Kit</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: inline-block;
+            margin-left: 2rem;
+        }
+
+        .logo img {
+            height: 30px;
+        }
+
+        nav {
+            display: flex;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #eee;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .code-block {
+            background-color: #eee;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        pre {
+            font-family: monospace;
+            font-size: 14px;
+            color: #222;
+            white-space: pre-wrap;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="BajajFinserv Logo">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Documentation</a>
+            <a href="#">Components</a>
+            <a href="#">Guidelines</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Buttons</h2>
+            <p class="content">Buttons are very useful action elements for any screen. They allow the user to take action and make choices with a single click tap.</p>
+            <h3>Introduction</h3>
+            <p class="content">This section provides an overview of the button guideline, targeting designers, developers, and product managers.</p>
+            <h3>Components</h3>
+            <p class="content">The "Components" section lists the various UI elements covered in the guideline.  "Buttons" is highlighted here, as it's the main focus.</p>
+            <h3>Buttons</h3>
+            <h4>Anatomy</h4>
+            <p class="content">This section outlines the structure of buttons, including their components, sizes, padding, and radius.</p>
+            <h4>Variants</h4>
+            <p class="content">This section demonstrates the various types of buttons with different functionalities and visual styles:</p>
+            <ul class="content">
+                <li>Filled button: Buttons with a solid background color.</li>
+                <li>Outline button: Buttons with a border and no background fill.</li>
+                <li>Ghost button: Transparent buttons with a subtle visual effect.</li>
+                <li>Text button: Simple text buttons without any background or border.</li>
+                <li>Text link button: Buttons that function as links.</li>
+                <li>Circular filled button: Circular buttons with an icon and numerical label.</li>
+                <li>Circular ghost button: Circular buttons with an icon and numerical label, but transparent.</li>
+            </ul>
+            <h4>Behaviour</h4>
+            <p class="content">Specifies the visual states of buttons, including:</p>
+            <ul class="content">
+                <li>Default: The button's normal state.</li>
+                <li>Focus: The button's state when the user focuses on it (e.g., using a keyboard or mouse).</li>
+                <li>Hover: The button's state when the mouse hovers over it.</li>
+                <li>Press: The button's state when the user clicks on it.</li>
+                <li>Disabled: The button's state when it's not active or available.</li>
+            </ul>
+            <h4>Usage</h4>
+            <p class="content">This section provides specific examples of button pairings and usage scenarios.</p>
+            <ul class="content">
+                <li>In Pop Ups</li>
+                <li>In Bottom Drawer & Sticky Bar</li>
+                <li>In Cards</li>
+            </ul>
+            <p class="content">Overall, this button guideline provides a comprehensive framework for creating consistent, user-friendly buttons in the BajajFinserv app. It ensures that all buttons align with a unified design language and effectively guide users through the app's functionality.</p>
+            <h3>SQL Database Schema</h3>
+            <div class="code-block">
+                <pre>
+CREATE TABLE buttons (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  type VARCHAR(255),
+  emphasis VARCHAR(255),
+  description TEXT,
+  icon VARCHAR(255),
+  icon_position VARCHAR(255),
+  example TEXT,
+  state VARCHAR(255),
+  behavior TEXT,
+  usage VARCHAR(255)
+);
+
+INSERT INTO buttons (type, emphasis, description, icon, icon_position, example, state, behavior) 
+VALUES
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", '', '', "Button", "Default", "The button's normal state."),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", '', '', "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", '', '', "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", '', '', "Button", "Press", "The button's state when the user clicks on it."),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", '', '', "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Outline", "Medium", "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", '', '', "Button", "Default", "The button's normal state."),
+  ("Outline", "Medium", "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", '', '', "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Outline", "Medium", "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", '', '', "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Outline", "Medium", "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", '', '', "Button", "Press", "The button's state when the user clicks on it."),
+  ("Outline", "Medium", "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", '', '', "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Ghost", "Medium", "Ghost buttons are those transparent and empty buttons that have a basic shape form, such as a rectangular or perhaps squared.", '', '', "Button", "Default", "The button's normal state."),
+  ("Ghost", "Medium", "Ghost buttons are those transparent and empty buttons that have a basic shape form, such as a rectangular or perhaps squared.", '', '', "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Ghost", "Medium", "Ghost buttons are those transparent and empty buttons that have a basic shape form, such as a rectangular or perhaps squared.", '', '', "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Ghost", "Medium", "Ghost buttons are those transparent and empty buttons that have a basic shape form, such as a rectangular or perhaps squared.", '', '', "Button", "Press", "The button's state when the user clicks on it."),
+  ("Ghost", "Medium", "Ghost buttons are those transparent and empty buttons that have a basic shape form, such as a rectangular or perhaps squared.", '', '', "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Text", "Low", "Text Buttons will go with what the paragraph font size is. We have to use primary colour for the text button without underline.", '', '', "Button", "Default", "The button's normal state."),
+  ("Text", "Low", "Text Buttons will go with what the paragraph font size is. We have to use primary colour for the text button without underline.", '', '', "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Text", "Low", "Text Buttons will go with what the paragraph font size is. We have to use primary colour for the text button without underline.", '', '', "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Text", "Low", "Text Buttons will go with what the paragraph font size is. We have to use primary colour for the text button without underline.", '', '', "Button", "Press", "The button's state when the user clicks on it."),
+  ("Text", "Low", "Text Buttons will go with what the paragraph font size is. We have to use primary colour for the text button without underline.", '', '', "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Text Link", "Low", "Text Link Buttons will go whenever the there is hyperlink and we have to navigate user out of the app to different page.", '', '', "Button", "Default", "The button's normal state."),
+  ("Text Link", "Low", "Text Link Buttons will go whenever the there is hyperlink and we have to navigate user out of the app to different page.", '', '', "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Text Link", "Low", "Text Link Buttons will go whenever the there is hyperlink and we have to navigate user out of the app to different page.", '', '', "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Text Link", "Low", "Text Link Buttons will go whenever the there is hyperlink and we have to navigate user out of the app to different page.", '', '', "Button", "Press", "The button's state when the user clicks on it."),
+  ("Text Link", "Low", "Text Link Buttons will go whenever the there is hyperlink and we have to navigate user out of the app to different page.", '', '', "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Circular Filled", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Default", "The button's normal state."),
+  ("Circular Filled", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Circular Filled", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Circular Filled", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Press", "The button's state when the user clicks on it."),
+  ("Circular Filled", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Disabled", "The button's state when it's not active or available."),
+  ("Circular Ghost", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Default", "The button's normal state."),
+  ("Circular Ghost", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Focus", "The button's state when the user focuses on it (e.g., using a keyboard or mouse)."),
+  ("Circular Ghost", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Hover", "The button's state when the mouse hovers over it."),
+  ("Circular Ghost", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Press", "The button's state when the user clicks on it."),
+("Circular Ghost", "", "Will be used for Icon button, with numbers.", "Icon", "Left", "Button", "Disabled", "The button's state when it's not active or available.");
+
+INSERT INTO buttons (type, emphasis, description, usage) 
+VALUES
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", "In Pop Ups"),
+  ("Outline",  "Medium",  "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", "In Pop Ups"),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", "In Bottom Drawer & Sticky Bar"),
+  ("Outline",  "Medium",  "Secondary buttons are the 'go back' to the primary button's 'next', or the 'cancel' button to the 'submit' button.", "In Bottom Drawer & Sticky Bar"),
+  ("Filled", "High", "A CTA button and a primary button can look the same, but like to separate them out for their actions. While CTA buttons are what the interface would want you to do, primary buttons are a strong visual indicator to help the user to complete their journey. Primary buttons should be used in situations where the user may want to go 'next', 'read more. 'see more', etc.", "In Cards");
+                </pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
